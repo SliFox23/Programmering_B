@@ -23,7 +23,7 @@ body {
     left: 1rem;
     top: 1rem;
     cursor: pointer;
-    font-size: 2rem;
+    font-size: 3rem;
     color: darkslategray;
     z-index: 3;
     transition: color 0.3s ease-in-out;
@@ -42,7 +42,7 @@ body {
     min-width: 15rem;
     background-color: darkslategray;
     color: burlywood;
-    padding: 4rem 1rem;
+    padding: 6rem 1rem 0 1rem;
     box-sizing: border-box;
     transition: left 0.3s ease-in-out;
 }
@@ -80,7 +80,7 @@ body {
     /* position fixed - klassen "show" viser pages*/
     position: fixed;
     left: -100vw;
-    transition: 1s ease-in-out all;
+    transition: all 1s ease-in-out;
 }
 
 .show {
