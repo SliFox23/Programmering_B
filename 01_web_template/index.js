@@ -4,29 +4,14 @@ var currentPage = '#page5'
 function setup(){
     console.log("p5 setup kaldt")
     //sæt event listeners op på menu
-    select('#menu-side1').mousePressed(
-        function(){
-            shiftPage('#page1')
-        }
-    )
-    select('#menu-side2').mousePressed(
-        function(){
-            shiftPage('#page2')
-        }
-    )
-    select('#menu-side3').mousePressed(
-        function(){
-            shiftPage('#page3')
-        }
-    )
-    select('#menu-side4').mousePressed(
-        function(){
-            shiftPage('#page4')
-        }
-    )
-    select('#menu-side5').mousePressed(
-        function(){
-            shiftPage('#page5')
+    var allMenuItems = selectAll('.sidebar a')
+    allMenuItems.map(
+        function(item){
+            item.mousePressed(
+                function(){
+                    shiftPage(item.attribute('action'))
+                }
+            )
         }
     )
 }
