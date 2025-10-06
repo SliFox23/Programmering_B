@@ -9,6 +9,26 @@ function setup(){
             shiftPage('#page1')
         }
     )
+    select('#menu-side2').mousePressed(
+        function(){
+            shiftPage('#page2')
+        }
+    )
+    select('#menu-side3').mousePressed(
+        function(){
+            shiftPage('#page3')
+        }
+    )
+    select('#menu-side4').mousePressed(
+        function(){
+            shiftPage('#page4')
+        }
+    )
+    select('#menu-side5').mousePressed(
+        function(){
+            shiftPage('#page5')
+        }
+    )
 }
 
 
