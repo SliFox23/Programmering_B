@@ -1,0 +1,49 @@
+body {
+    background-color: palevioletred;
+    @import url('https://fonts.googleapis.com/css2?family=Comic+Relief&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+    font-family: "Comic Relief", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.page {
+    color: red;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    position: fixed;
+    left: -100vw;
+    transition: 1s ease-in-out all;
+}
+
+.show {
+    left: 0;
+}
+
+.page div {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+#page1 {
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    background-color: beige;
+}
+
+#page1 .top{
+    background-color: darkmagenta;
+}
+
+
+#page1 .bottom{
+    background-color: cornflowerblue;
+}
+
