@@ -192,21 +192,27 @@ h1{
 }
 
 #page5 .right {
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows:1fr 1fr;
 }
 
 #page5 .right .top{
-    background-color: chocolate;
-    color: burlywood;
+    background-color: hotpink;
 }
 
 #page5 .right .bottom{
-    background-color: darkslategray;
-    color: burlywood;
+    background-color: black;
+    color:white;
+    overflow:hidden;
+    height:50vh;
+    position:relative;
 }
-#page5 .left{
-    color: transparent;
-    background-image: url(./Assets/mis3.jpeg);
-    background-size: cover;
-    
+
+#page5 .right .bottom video {
+    display:none;
+}
+
+#page5 .right .bottom #overlay{
+    position:absolute;
+    display:grid;
+    place-items:center;
 }
