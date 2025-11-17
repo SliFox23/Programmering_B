@@ -1,10 +1,28 @@
 var currentPage = '#page5'
+var videoButton, theVideo
+var videoPlaying = true
 
 //P5 setup() bliver kaldt EN gang før siden vises
 function setup(){
     console.log("p5 setup kaldt")
     //skift til current page
     shiftPage(currentPage)
+
+    //videon
+    theVideo = select('#theVideo')
+    //video control button
+    videoButton = select('#videoButton')
+    videoButton.mousePressed(()=>{
+        //console.log('button pressed')
+        if(videoPlaying){
+            theVideo.pause()
+            videoPlaying = false
+        }else{
+            theVideo.plaay()
+            videoPlaying = true
+        }
+    })
+
     //sæt menu op
     //Hent alle sider som et nyt array
     var allPages=selectAll('.page')

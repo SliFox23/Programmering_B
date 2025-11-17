@@ -192,7 +192,39 @@ h1{
 #page5 .right .bottom{
     background-color: darkslategray;
     color: burlywood;
+    position: relative;
+    overflow: hidden;
+    height: 50vh;
 }
+
+#page5 .right .bottom .video{
+    object-fit: cover;
+    overflow: hidden;
+    height: 50vh;
+}
+
 #page5 .left{
     color: burlywood;
+    position: absolute;
+    display: grid;
+    place-items: center;
+}
+
+#videoButton{
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 1rem;
+    background-color: rgba(100,100,100,0.9);
+    color: white;
+    border: 1px solid lightgray;
+    z-index: 1000;
+    transition: .3s ease-in-out all;
+    cursor: pointer;
+}
+
+#videoButton:hover{
+    background-color: white;
+    color: black;
 }
