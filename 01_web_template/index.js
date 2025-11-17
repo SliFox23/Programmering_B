@@ -1,49 +1,48 @@
+
 var currentPage = '#page5'
 var videoButton, theVideo
 var videoPlaying = true
 
-//P5 setup() bliver kaldt EN gang før siden vises
+//P5 setup() bliver kaldt en gang før siden vises
 function setup(){
-    console.log("p5 setup kaldt")
-    //skift til current page
+    console.log('Ba- ba- ball')
     shiftPage(currentPage)
 
-    //videon
+    //Videon
     theVideo = select('#theVideo')
-    //video control button
+
+    //Video controll button
     videoButton = select('#videoButton')
     videoButton.mousePressed(()=>{
         //console.log('button pressed')
         if(videoPlaying){
             theVideo.pause()
-            videoPlaying = false
+            videoPlaying = false  
         }else{
-            theVideo.plaay()
+            theVideo.play()
             videoPlaying = true
         }
     })
 
     //sæt menu op
-    //Hent alle sider som et nyt array
-    var allPages=selectAll('.page')
-    //sæt a taggetsnhtml til sidens titel
-    //Løb listen igennem en for en
+    //Hent alle sider som et array
+    var allPages = selectAll('.page')
+    //løb listen iggennem en for en
     allPages.map(
         page => {
             //lav et nyt <a> element
             var menuItem = createElement('a')
+            //Sæt s tagget til html titel
             menuItem.html(page.attribute('title'))
-            //sæt eventlister på a tagget
+            //set eventlistener på a tagget
             menuItem.mousePressed(
-                ()=> shiftPage('#' + page.attribute('id'))
+                ()=>shiftPage('#' + page.attribute('id'))
             )
-            //sæt a tagget ind i sidebaren
+            //sæt a tagget ind i sideabar
             select('.sidebar').child(menuItem)
         }
     )
-
 }
-
 
 function shiftPage(newPage){
     select(currentPage).removeClass('show')
